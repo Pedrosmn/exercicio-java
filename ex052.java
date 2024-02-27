@@ -10,7 +10,6 @@ public class ex052 {
 
         int contador = 0;
         int i = 1;
-        //int contador = 0;
         while (i < (num+1)) {
             if (num % i == 0) {
                 contador += 1;
