@@ -39,10 +39,51 @@ public class Lab2 {
         System.out.println("A soma dos " + quantia + " números é igual à " + total);
     }
 
-    public static void main(String[] args) {
-        //sequencia();
-        //potenciacao();
-        //somaTotal();
+    public static void maisNovo() {
+        short auxiliarIdade = 0;
+        String auxiliarNome = "";
+        for (int i = 1; i <= 3; i++) {
+            System.out.print("Nome da " + i + "° pessoa: ");
+            String nome = scan.nextLine();
+            System.out.print("Idade: ");
+            short idade = scan.nextShort();
+            System.out.println("--------------");
+
+            if ((idade < auxiliarIdade) || (auxiliarIdade == 0)) {
+                auxiliarIdade = idade;
+                auxiliarNome = nome;
+            }
+            scan.nextLine();
+        }
+        System.out.println("A pessoa mais nova entre as 3 é " + auxiliarNome + " com " + auxiliarIdade + " anos.");
     }
 
+    public static void faixasNumericas() {
+        int primeiraFaixa = 0;
+        int segundaFaixa = 0;
+        int terceiraFaixa = 0;
+        for (int i = 1; i <= 10; i++) {
+            System.out.print("Digite o " + i + " número: ");
+            int numero = scan.nextInt();
+
+            if ((numero >= 0) && (numero <= 100)) {
+                primeiraFaixa++;
+            } else if (numero <= 500) {
+                segundaFaixa++;
+            } else if (numero > 500){
+                terceiraFaixa++;
+            }
+        }
+        System.out.println(primeiraFaixa + " Números na faixa de 0-100\n" +
+                           segundaFaixa +  " Números na faixa de 101-500\n" +
+                           terceiraFaixa + " Números na faixa de 501+");
+    }
+
+    public static void main(String[] args) {
+        sequencia();
+        potenciacao();
+        somaTotal();
+        maisNovo();
+        faixasNumericas();
+    }
 }
