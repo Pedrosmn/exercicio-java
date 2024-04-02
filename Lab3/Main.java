@@ -7,16 +7,16 @@ public class Main {
 
         System.out.println(c1);
         System.out.println(c2);
-
+        Disciplina matematica = new Disciplina("Matemática", "João", 3, "Tarde");
+        Disciplina geografia = new Disciplina("Geografia", "Jorge", 4, "Tarde");
+        Disciplina portugues = new Disciplina("Português", "Jâmio", 3, "Tarde");
+        Disciplina artes = new Disciplina("Artes", "Lário", 4, "Tarde");
 
         Aluno pedro = new Aluno("Pedro", "1231231", 3);
         Aluno paulo = new Aluno("Paulo", "45645645", 4);
         Aluno pereira = new Aluno("Pereira", "789789", 3);
         Aluno marcio = new Aluno("Márcio", "2992393", 4);
-        Disciplina matematica = new Disciplina("Matemática", "João", 3);
-        Disciplina geografia = new Disciplina("Geografia", "Jorge", 4);
-        Disciplina portugues = new Disciplina("Português", "Jâmio", 3);
-        Disciplina artes = new Disciplina("Artes", "Lário", 4);
+
 
         matematica.matricularAluno(pedro);
         geografia.matricularAluno(pedro);

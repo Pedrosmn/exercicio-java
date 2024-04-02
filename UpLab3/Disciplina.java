@@ -1,19 +1,24 @@
-package Lab3;
+package UpLab3;
+import java.util.*;
 
 public class Disciplina {
     private String nome;
     private String professor;
-    private Aluno[] alunos;
+    private ArrayList<Aluno> alunos;
     private String horario;
-    private int tamanhoMaximo;
     private int contador;
 
-    public Disciplina(String nome, String professor, int tamanhoMaximo, String horario) {
+    public Disciplina(String nome, String professor, String horario) {
         this.nome = nome;
         this.professor = professor;
-        this.alunos = new Aluno[tamanhoMaximo];
-        this.horario = horario;
-        this.tamanhoMaximo = tamanhoMaximo;
+        this.alunos = new ArrayList<>();
+        if (horario.equals("1")) {
+            this.horario = "Matutino";
+        } else if (horario.equals("2")) {
+            this.horario = "Vespertino";
+        } else if (horario.equals("3")) {
+            this.horario = "Noturno";
+        }
         this.contador = 0;
     }
 
@@ -33,21 +38,15 @@ public class Disciplina {
         this.professor = professor;
     }
 
-    public Aluno[] getAlunos() {
-        return alunos;
+    public String getHorario() {return horario;}
+
+    public void setHorario(String horario) {
+        this.horario = horario;
     }
 
-    public void setAlunos(Aluno[] alunos) {
-        this.alunos = alunos;
-    }
+    public ArrayList<Aluno> getAlunos() {return alunos;}
 
-    public int getTamanhoMaximo() {
-        return tamanhoMaximo;
-    }
-
-    public void setTamanhoMaximo(int tamanhoMaximo) {
-        this.tamanhoMaximo = tamanhoMaximo;
-    }
+    public void setAlunos(ArrayList<Aluno> alunos) {this.alunos = alunos;}
 
     public int getContador() {
         return contador;
@@ -57,7 +56,7 @@ public class Disciplina {
         this.contador = contador;
     }
 
-    public void matricularAluno(Aluno aluno) {
+    /*public void matricularAluno(Aluno aluno) {
         if (this.contador < this.tamanhoMaximo) {
             this.alunos[this.contador] = aluno;
             aluno.addDisciplina(this);
@@ -69,5 +68,5 @@ public class Disciplina {
         for (int i = 0; i < this.contador; i++) {
             System.out.println("Nome: " + this.alunos[i].getNome());
         }
-    }
+    }*/
 }
