@@ -1,17 +1,17 @@
 package UpLab3;
 
+import java.util.ArrayList;
+
 public class Aluno {
     private String nome;
     private String numeroMatricula;
-    private int maxDisciplinas;
-    private Disciplina[] listaDisciplinas;
+    private ArrayList<Disciplina> listaDisciplinas;
     private int contador;
 
-    public Aluno(String nome, String numeroMatricula, int maxDisciplinas) {
+    public Aluno(String nome, String numeroMatricula, ArrayList<Disciplina> listaDisciplinas) {
         this.nome = nome;
         this.numeroMatricula = numeroMatricula;
-        this.maxDisciplinas = maxDisciplinas;
-        this.listaDisciplinas = new Disciplina[maxDisciplinas];
+        this.listaDisciplinas = new ArrayList<>();
         this.contador = 0;
     }
 
@@ -31,19 +31,11 @@ public class Aluno {
         this.numeroMatricula = numeroMatricula;
     }
 
-    public int getMaxDisciplinas() {
-        return maxDisciplinas;
-    }
-
-    public void setMaxDisciplinas(int maxDisciplinas) {
-        this.maxDisciplinas = maxDisciplinas;
-    }
-
-    public Disciplina[] getListaDisciplinas() {
+    public ArrayList<Disciplina> getListaDisciplinas() {
         return listaDisciplinas;
     }
 
-    public void setListaDisciplinas(Disciplina[] listaDisciplinas) {
+    public void setListaDisciplinas(ArrayList<Disciplina> listaDisciplinas) {
         this.listaDisciplinas = listaDisciplinas;
     }
 
@@ -56,12 +48,12 @@ public class Aluno {
     }
 
 
-    public void addDisciplina(Disciplina disciplina) {
+    /*public void addDisciplina(Disciplina disciplina) {
         if (this.contador < this.maxDisciplinas) {
             this.listaDisciplinas[this.contador] = disciplina;
             this.contador++;
         }
-    }
+    }*/
 }
 
 

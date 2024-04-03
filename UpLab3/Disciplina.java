@@ -56,17 +56,13 @@ public class Disciplina {
         this.contador = contador;
     }
 
-    /*public void matricularAluno(Aluno aluno) {
-        if (this.contador < this.tamanhoMaximo) {
-            this.alunos[this.contador] = aluno;
-            aluno.addDisciplina(this);
-            this.contador++;
-        }
+    public void matricularAluno(Aluno aluno) {
+        this.alunos.add(aluno);
     }
 
     public void listarAluno() {
-        for (int i = 0; i < this.contador; i++) {
-            System.out.println("Nome: " + this.alunos[i].getNome());
+        for (Aluno a : alunos) {
+            System.out.println(a.getNome() + ", " + a.getNumeroMatricula());
         }
-    }*/
+    }
 }
